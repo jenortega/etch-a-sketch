@@ -13,9 +13,12 @@ let sizeOfCell = 0;
 
 createButton.addEventListener('click', () => {
 
-    do {
-        number = parseInt(prompt("Please enter a number from 1 to 100", ""));
-    } while (isNaN(number) || number > 100 || number < 1);
+    number = parseInt(prompt("Please enter a number from 1 to 100"));
+    if (number > 0 && number < 101) {
+        number = number;
+    } else {
+        number = parseInt(prompt("Please enter a number from 1 to 100"));
+    }
 
     createSketch(number);
 
@@ -38,9 +41,12 @@ resetButton.addEventListener('click', () => {
         i++;
     }
 
-    do {
-        number = parseInt(prompt("Please enter a number from 1 to 100", ""));
-    } while (isNaN(number) || number > 100 || number < 1);
+    number = parseInt(prompt("Please enter a number from 1 to 100"));
+    if (number > 0 && number < 101) {
+        number = number;
+    } else {
+        number = parseInt(prompt("Please enter a number from 1 to 100"));
+    }
 
     createSketch(number);
 
